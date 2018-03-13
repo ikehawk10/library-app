@@ -1,8 +1,6 @@
-import { computed } from '@ember/object';
 import { 
 	gte, 
 	and, 
-	empty, 
 	notEmpty,
 	not 
 } from '@ember/object/computed';
