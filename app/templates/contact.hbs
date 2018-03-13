@@ -1,1 +1,19 @@
-<h1>Contact Page</h1>
+{{#if messageNotSent}}
+	<div class="form-horizontal form-group form-group-lg row">
+		<div class="col-xs-offset-4 col-xs-4">
+			{{input type="email" value=emailAddress class="form-control" placeholder="Please type your e-mail address." autofocus="autofocus"}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-offset-2 col-xs-8">
+			{{textarea class="form-control" value=message placeholder="Enter a message" rows="3"}}
+		</div>
+	</div>
+	<button disabled={{isDisabled}} class="btn btn-primary btn-lg btn-block" {{action 'sendMessage'}}>Send Message</button>
+	{{else}}
+		<div class="alert alert-success" role="alert">
+			<h3>Your message has been sent. Thank you!</h3>
+		</div>
+{{/if }}
+
+	
